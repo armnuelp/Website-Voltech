@@ -1,0 +1,229 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./components/TiltedCard.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+.tilted-card-figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tilted-card-mobile-alert {
+    position: absolute;
+    top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    display: none;
+    color: white;
+    /* Added color for visibility */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+@media (max-width: 640px) {
+
+    /* 
+  .tilted-card-mobile-alert {
+    display: block;
+  }
+  */
+    /* User probably doesn't want the visual alert on their production site if it breaks immersion, 
+     but I'll keep it commented or styled nicely if enabled. 
+     Actually, better to hide the caption on mobile but maybe NOT show the alert unless critical.
+     The user code had display: block. 
+  */
+    .tilted-card-caption {
+        display: none;
+    }
+}
+
+.tilted-card-inner {
+    position: relative;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+
+.tilted-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.tilted-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    will-change: transform;
+    transform: translateZ(30px);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Allow clicks to pass through if needed for modal */
+}
+
+.tilted-card-caption {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 4px 10px;
+    font-size: 10px;
+    color: #2d2d2d;
+    opacity: 0;
+    z-index: 3;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./components/Carousel.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #555;
+    border-radius: 24px;
+    padding: 16px;
+    --outer-r: 24px;
+    --p-distance: 12px;
+}
+
+.carousel-track {
+    display: flex;
+}
+
+.carousel-item {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid #555;
+    border-radius: calc(var(--outer-r) - var(--p-distance));
+    background-color: #0d0716;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.carousel-item:active {
+    cursor: grabbing;
+}
+
+.carousel-container.round {
+    border: 1px solid #555;
+}
+
+.carousel-item.round {
+    background-color: #0d0716;
+    position: relative;
+    bottom: 0.1em;
+    border: 1px solid #555;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel-item-header.round {
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-indicators-container.round {
+    position: absolute;
+    z-index: 2;
+    bottom: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-indicator.active {
+    background-color: #333333;
+}
+
+.carousel-indicator.inactive {
+    background-color: rgba(51, 51, 51, 0.4);
+}
+
+.carousel-item-header {
+    margin-bottom: 16px;
+    padding: 20px;
+    padding-top: 20px;
+}
+
+.carousel-icon-container {
+    display: flex;
+    height: 28px;
+    width: 28px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.carousel-icon {
+    height: 16px;
+    width: 16px;
+    color: #060010;
+}
+
+.carousel-item-content {
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+.carousel-item-title {
+    margin-bottom: 4px;
+    font-weight: 900;
+    font-size: clamp(18px, 5vw, 22px);
+    color: #fff;
+    line-height: 1.2;
+}
+
+.carousel-item-description {
+    font-size: clamp(14px, 3.5vw, 16px);
+    color: #fff;
+    line-height: 1.5;
+}
+
+.carousel-indicators-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.carousel-indicators {
+    margin-top: 16px;
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+.carousel-indicator {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 150ms;
+}
+
+.carousel-indicator.active {
+    background-color: #fff;
+}
+
+.carousel-indicator.inactive {
+    background-color: #555;
+}

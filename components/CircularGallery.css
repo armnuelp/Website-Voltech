@@ -1,0 +1,41 @@
+.circular-gallery-container {
+  width: 100%;
+  height: 600px; /* matched the requested height */
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* user-select: none; */
+  cursor: grab;
+}
+
+.circular-gallery-container:active {
+  cursor: grabbing;
+}
+
+.gallery-scene {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Perspective is set inline */
+}
+
+.gallery-cylinder {
+  position: relative;
+  width: 0;
+  height: 400px; /* height of cards */
+  /* transform-style and rotateY controlled by motion */
+}
+
+.gallery-item {
+  /* Positioning handled inline */
+  transition: opacity 0.3s;
+}
+
+.gallery-card {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
