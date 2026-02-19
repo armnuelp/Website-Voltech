@@ -50,8 +50,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="id" className={`${inter.variable} ${outfit.variable}`}>
-            <body className="font-sans antialiased">
+        <html lang="id" className={`${inter.variable} ${outfit.variable} overflow-x-hidden`}>
+            <body className="font-sans antialiased overflow-x-hidden">
                 <ScrollFix />
                 <ScrollToTop />
                 <LanguageProvider>

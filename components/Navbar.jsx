@@ -127,12 +127,21 @@ export default function Navbar() {
                                     transition={{ delay: i * 0.05 }}
                                     onClick={(e) => {
                                         e.preventDefault();
+                                        // 1. Close menu state
                                         setMobileOpen(false);
+                                        // 2. Unlock body scroll immediately
+                                        document.body.style.overflow = '';
+
                                         const targetId = link.href.replace('#', '');
                                         const element = document.getElementById(targetId);
+
                                         if (element) {
-                                            element.scrollIntoView({ behavior: 'smooth' });
-                                            window.history.pushState(null, '', link.href);
+                                            // 3. Scroll after a tiny delay to ensure layout effect has processed if needed
+                                            setTimeout(() => {
+                                                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                                // Optional: correct the URL hash without jumping
+                                                window.history.pushState(null, '', link.href);
+                                            }, 100);
                                         }
                                     }}
                                     className="block px-4 py-3 text-base text-volt-200 hover:text-volt-50 hover:bg-white/5 rounded-xl transition-colors"
@@ -146,10 +155,14 @@ export default function Navbar() {
                                     onClick={(e) => {
                                         e.preventDefault();
                                         setMobileOpen(false);
+                                        document.body.style.overflow = '';
+
                                         const element = document.getElementById('contact');
                                         if (element) {
-                                            element.scrollIntoView({ behavior: 'smooth' });
-                                            window.history.pushState(null, '', '#contact');
+                                            setTimeout(() => {
+                                                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                                window.history.pushState(null, '', '#contact');
+                                            }, 100);
                                         }
                                     }}
                                     className="block text-center px-5 py-3 text-sm font-semibold rounded-full bg-gradient-to-r from-volt-500 to-volt-600 text-white"
