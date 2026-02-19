@@ -28,9 +28,9 @@ export const metadata = {
         apple: '/assets/icon/IMG_8248.PNG',
     },
     openGraph: {
-        title: 'Voltech.h — Smart Energy Infrastructure',
+        title: 'Voltech.h — Impactful Technology Solutions',
         description:
-            'Solusi teknologi energi terdepan untuk Indonesia. Smart grid, solar engineering, energy storage & analytics.',
+            'Solusi teknologi terdepan untuk Indonesia. Smart grid, 3D Mechanical Design & 3D Printing, Hardware Development, Software Development, Embedded System Development, System Integration & Prototyping.',
         url: 'https://voltech-h.id',
         siteName: 'Voltech.h',
         locale: 'id_ID',
@@ -38,9 +38,9 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Voltech.h — Smart Energy Infrastructure',
+        title: 'Voltech.h — Impactful Technology Solutions',
         description:
-            'Solusi teknologi energi terdepan untuk Indonesia.',
+            'Solusi teknologi terdepan untuk Indonesia.',
     },
     robots: {
         index: true,

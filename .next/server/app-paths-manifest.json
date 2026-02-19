@@ -1,6 +1,4 @@
 {
   "/page": "app/page.js",
-  "/products-assets/route": "app/products-assets/route.js",
-  "/products/page": "app/products/page.js",
-  "/portfolio-assets/route": "app/portfolio-assets/route.js"
+  "/products/page": "app/products/page.js"
 }
