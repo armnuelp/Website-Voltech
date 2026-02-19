@@ -17,7 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-    title: 'Voltech.h — Smart Energy Infrastructure for Indonesia',
+    title: 'Voltech.h — Impactful Technology Solutions',
     description:
         'Voltech.h menghadirkan solusi teknologi energi terdepan: smart grid, solar engineering, energy storage, dan analytics untuk masa depan Indonesia yang berkelanjutan.',
     keywords: ['energy technology', 'smart grid', 'solar engineering', 'Indonesia', 'Voltech.h', 'teknologi energi'],
